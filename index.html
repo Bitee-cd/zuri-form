@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Contact Page</title>
 </head>
 <body>
@@ -26,18 +27,40 @@
         <button><span>Try it for 7 days</span> then $20/mo. thereafter</button>
       </div>
       <div class="contactForm">
-        <form>
-          <input type="text" required placeholder="First Name">
-          <input type="email" required placeholder="Last Name">
-          <input type="email" required placeholder="Email Address">
-          <input type="email" required placeholder="Password">
+        
+        <form id="form" class="form" novalidate>
+            <div class="form-control">
+              <input type="text" required placeholder="First Name" id="first-name" name="first" required> 
+              <img src="images/icon-error.svg" alt="" class="error">
+              <small class="error"></small>
+            </div>
+
+            <div class="form-control">
+              <input type="text" required placeholder="Last Name" id="last-name">
+              <img src="images/icon-error.svg" alt="" class="error">
+              <small class="error"></small>
+            </div>
+
+            <div class="form-control">
+              <input type="email" required placeholder="Email Address" id="email">
+              <img src="images/icon-error.svg" alt="">
+              <small ></small>
+            </div>
+
+            <div class="form-control">
+              <input type="password" required placeholder="Password" id="password">
+              <img src="images/icon-error.svg" alt="" class="error">
+              <small></small>
+            </div>
+          <button id="submit">claim your free trial now</button>
           
-          <button type="submit">claim your free trial now</button>
           <p>By clicking the button you are agreeing to our <a href="#">terms and conditions</a></p>
         </form>
       </div>
     </div>
     <!-- contact formbox -->
   </div>
+
+  <script src="javascript.js"></script>
 </body>
 </html>
